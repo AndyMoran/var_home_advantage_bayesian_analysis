@@ -47,10 +47,15 @@ The question is no longer “Does VAR change results?” but “How can VAR be i
 ## Repository Structure
 .
 ├── var-home-advantage-bayesian.ipynb   # Main analysis notebook
+
 ├── figures/                            # Exported plots
+
 │   └── (trend, posterior, segmentation visuals)
+
 ├── data/ (optional)                    # Cached CSVs if used
+
 ├── requirements.txt                    # Python dependencies
+
 └── README.md                           # Project documentation
 
 ## Methods
