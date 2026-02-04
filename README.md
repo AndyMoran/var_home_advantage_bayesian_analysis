@@ -21,9 +21,7 @@ The result is a clear, honest, and multi‑layered assessment of VAR’s effect 
 
 1. Apparent VAR effect is driven by the COVID no‑crowd season
 A naïve Bayesian model suggests an 87% probability that home advantage declined after VAR was introduced.
-However, this result collapses to ~52% (a coin toss) once the 2020/21 season is excluded.
-
-This indicates that the pandemic, not VAR, explains most of the observed drop.
+However, this result collapses to ~52% (a coin toss) once the 2020/21 season is excluded. This indicates that the pandemic, not VAR, explains most of the observed drop.
 
 2. Long‑run trends show a gradual decline independent of VAR
 Season‑by‑season home win rates reveal a slow downward drift beginning long before VAR.
