@@ -3,7 +3,7 @@
 This project asks a simple question: Did VAR change home advantage in the Premier League?  
 Using match data from 2010/11 to 2023/24, I use Bayesian modelling, sensitivity checks, and segmentation to separate real effects from noise, confounders, and long‑run trends.
 
-The goal is clear, honest analysis — not hype.
+The goal is clear, honest analysis.
 
 ## Overview
 
