@@ -1,48 +1,55 @@
 # VAR and Premier League Home Advantage: A Bayesian Analysis
 
-This project investigates whether the introduction of Video Assistant Referees (VAR) in the Premier League meaningfully changed home advantage. Using match‑level data from 2010/11 to 2023/24, the analysis combines Bayesian modelling, sensitivity checks, segmentation, and business framing to provide a balanced, evidence‑driven assessment of VAR’s impact.
+This project asks a simple question: Did VAR change home advantage in the Premier League?  
+Using match data from 2010/11 to 2023/24, I use Bayesian modelling, sensitivity checks, and segmentation to separate real effects from noise, confounders, and long‑run trends.
+
+The goal is clear, honest analysis — not hype.
 
 ## Overview
-Home advantage in football has been declining globally for years, and the introduction of VAR in 2019/20 raised questions about whether technology might further reduce referee bias toward home teams. This project evaluates that claim using:
 
-- A Bayesian Beta–Binomial model comparing pre‑VAR and post‑VAR steady‑state eras
+Home advantage has been drifting downward for years. When VAR arrived in 2019/20, many people assumed it would reduce referee bias and cut home wins. This project tests that idea using a:
 
-- A sensitivity analysis excluding the 2020/21 no‑crowd season
+- Bayesian Beta–Binomial model comparing pre‑VAR and post‑VAR seasons
 
-- A temporal trend diagnostic to check for long‑run secular decline
+- sensitivity analysis that removes the 2020/21 no‑crowd season
 
-- A competitive balance segmentation (Big Six vs others)
+- trend check to see whether home advantage was already falling
 
-- A business‑focused ROI and “So What?” section for strategic interpretation
+- Big Six vs. non‑Big Six segmentation
 
-The result is a clear, honest, and multi‑layered assessment of VAR’s effect on competitive balance.
+- short business and fan‑experience discussion
+
+The aim is to understand what changed, what didn’t, and what actually matters.
 
 ## Key Findings
 
-1. Apparent VAR effect is driven by the COVID no‑crowd season
-A naïve Bayesian model suggests an 87% probability that home advantage declined after VAR was introduced.
-However, this result collapses to ~52% (a coin toss) once the 2020/21 season is excluded. This indicates that the pandemic, not VAR, explains most of the observed drop.
+1. The “VAR effect” disappears once you remove the COVID season
+A naïve model suggests an 87% chance that home advantage fell after VAR.
+Remove the 2020/21 no‑crowd season and that drops to ~52% — essentially a coin flip.
 
-2. Long‑run trends show a gradual decline independent of VAR
-Season‑by‑season home win rates reveal a slow downward drift beginning long before VAR.
-This reinforces the need for caution when attributing changes to technology.
+Conclusion: the pandemic, not VAR, explains the sharp dip.
 
-3. No evidence of competitive imbalance
-Segmenting matches into Big Six vs non‑Big Six home teams shows similar pre/post shifts.
-VAR did not disproportionately benefit or disadvantage elite clubs.
+2. Home advantage has been declining for a decade
+Season‑by‑season trends show a slow, steady fall long before VAR existed.
+This warns against blaming technology for a long‑running shift.
 
-4. Business implications outweigh statistical effects
-Since VAR does not meaningfully alter home advantage, the Premier League’s strategic focus should shift toward:
+3. No sign of competitive imbalance
+Big Six clubs and everyone else show the same pattern.
+VAR did not tilt the league toward or against elite teams.
 
-- improving transparency
+4. The business story matters more than the statistical one
+Since VAR doesn’t change results much, the Premier League’s priorities should be:
 
-- reducing disruption
+- clearer communication
 
-- managing fan sentiment
+- fewer delays
 
-- maximising broadcast value
+- better fan experience
 
-The question is no longer “Does VAR change results?” but “How can VAR be implemented to improve fairness and experience?”
+- stronger broadcast value
+
+The real question isn’t “Does VAR change outcomes?”  
+It’s “How do we make VAR work better for the sport?”
 
 ## Repository Structure
 .
@@ -52,7 +59,7 @@ The question is no longer “Does VAR change results?” but “How can VAR be i
 
 │   └── (trend, posterior, segmentation visuals)
 
-├── data/ (optional)                    # Cached CSVs if used
+├── data/ (optional)                    # Cached CSVs
 
 ├── requirements.txt                    # Python dependencies
 
@@ -60,49 +67,53 @@ The question is no longer “Does VAR change results?” but “How can VAR be i
 
 ## Methods
 
-**Bayesian Modelling**
+**Bayesian Model**
+
 A Beta–Binomial model estimates home‑win probabilities for:
 
-- Pre‑VAR steady‑state seasons
+- pre‑VAR steady‑state seasons
 
-- Post‑VAR steady‑state seasons
+- post‑VAR steady‑state seasons
 
-- Posterior differences quantify the probability that home advantage declined.
+Posterior differences give the probability that home advantage fell.
 
 **Sensitivity Analysis**
-The 2020/21 season is treated as a confounder due to empty stadiums.
-Excluding it dramatically changes the posterior, revealing the fragility of naïve conclusions.
 
-**Temporal Trend Check**
-A season‑level trend plot provides context for secular decline and helps avoid misattribution.
+The 2020/21 season had empty stadiums. It behaves like an outlier and overwhelms the signal. Removing it shows how fragile the naïve conclusion is.
 
-**Competitive Balance Segmentation**
-Home win rates are compared for:
+**Trend Check**
+
+A simple season‑level trend line shows a long‑term decline.
+This helps avoid attributing structural changes to VAR.
+
+**Competitive Balance**
+
+I compare home‑win rates for:
 
 - Big Six clubs
 
-- All other clubs
+- all other clubs
 
-This checks for distributional effects relevant to league fairness and revenue.
+This checks whether VAR shifted fairness or league balance.
 
-##Business Perspective
+**Business Perspective**
 
-A structured ROI lens evaluates VAR beyond match outcomes:
+VAR affects more than match outcomes.
 
-Costs: implementation, operations, disruption to match flow
+I look at its broader return on investment:
 
-Benefits: fairness, accuracy, broadcast drama
+- Costs: implementation, operations, stoppages
 
-Moderators: fan sentiment, league reputation
+- Benefits: fairness, accuracy, broadcast drama
 
-The analysis concludes that VAR’s value depends more on how it is implemented than on any measurable effect on home advantage.
+- Moderators: fan sentiment, league reputation
 
-##Conclusion
+The evidence suggests VAR’s value depends on how it is run, not on any measurable change in home advantage.
 
-VAR did not meaningfully change Premier League home advantage.
-The small, uncertain shift is dominated by pandemic‑related conditions and long‑run trends rather than technology.
+**Conclusion**
 
-The Premier League’s strategic priority should be optimising VAR’s transparency, consistency, and fan experience — not expecting it to reshape competitive balance.
+VAR did not meaningfully change home advantage in the Premier League. The small, uncertain shift is driven by the pandemic and long‑run trends, not by the technology itself.
+The league’s real opportunity lies in improving transparency, consistency, and the fan experience — not expecting VAR to reshape competitive balance.
 
 How to Run
 
